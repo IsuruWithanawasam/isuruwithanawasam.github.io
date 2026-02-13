@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://isuruwithanawasam.github.io/sitemap.xml
