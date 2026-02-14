@@ -322,6 +322,101 @@ ul {
     font-weight: bold;
 }
 
+/* --- RESEARCH METRICS SECTION --- */
+.metrics-container {
+    max-width: var(--max-width-narrow);
+    margin: var(--spacing-md) auto 0;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+.metric-icon {
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(44, 95, 141, 0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    font-family: var(--font-serif);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scholar-link-container {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+}
+
+.scholar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.scholar-link:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 95, 141, 0.2);
+}
+
+.scholar-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* --- TIMELINE --- */
 .timeline {
     max-width: var(--max-width-narrow);
@@ -679,7 +774,11 @@ ul {
     .header-subtitle {
         font-size: 1.15rem;
     }
-    
+   
+   .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+   
     .timeline-item {
         grid-template-columns: 1fr;
         gap: var(--spacing-xs);
@@ -726,3 +825,4 @@ ul {
         text-decoration: underline;
     }
 }
+
